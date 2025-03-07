@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <style>
+        /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Label styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Input fields and select styling */
+input, select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border-color: #5a90ea;
+    outline: none;
+    box-shadow: 0 0 5px rgba(90, 144, 234, 0.5);
+}
+
+/* Button styling */
+button {
+    background-color: #2fccf8;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+input[type="email"], [type="text"], [type="password"]{
+    width: 94%;
+}
+
+button:hover {
+    background-color: #5a90ea;
+}
+
+button:active {
+    background-color: #2fccf8;
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Dynamic fields visibility */
+#studentFields, #teacherFields, #adminFields {
+    display: none;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+/* Media query for responsive design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+    </style>
+
+    <script>
+        function showFields(role) {
+            document.getElementById('studentFields').style.display = role === 'student' ? 'block' : 'none';
+            document.getElementById('teacherFields').style.display = role === 'teacher' ? 'block' : 'none';
+            document.getElementById('adminFields').style.display = role === 'admin' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" action="login.php">
+        <label for="role">Role:</label>
+        <select name="role" id="role" onchange="showFields(this.value)" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <!-- Student Fields -->
+        <div id="studentFields" style="display:none;">
+            <label for="student_email">Email:</label>
+            <input type="email" name="student_email" id="student_email" />
+            <label for="reg_no">Register Number:</label>
+            <input type="text" name="reg_no" id="reg_no" />
+        </div>
+
+        <!-- Teacher Fields -->
+        <div id="teacherFields" style="display:none;">
+            <label for="teacher_email">Email:</label>
+            <input type="email" name="teacher_email" id="teacher_email" />
+            <label for="staff_id">Staff ID:</label>
+            <input type="text" name="staff_id" id="staff_id" />
+        </div>
+
+        <!-- Admin Fields -->
+        <div id="adminFields" style="display:none;">
+            <label for="admin_email">Email:</label>
+            <input type="email" name="admin_email" id="admin_email" />
+            <label for="admin_password">Password:</label>
+            <input type="password" name="admin_password" id="admin_password" />
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

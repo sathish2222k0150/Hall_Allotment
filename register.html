@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role-Based Registration</title>
+    <style>
+        /* General reset and styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Label and input fields */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    border-color: #5a90ea;
+    outline: none;
+    box-shadow: 0 0 3px rgba(90, 144, 234, 0.5);
+}
+
+/* Student and teacher fields */
+#student-fields,
+#teacher-fields {
+    display: none;
+}
+
+/* Button styling */
+button {
+    background-color: #2fccf8;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type="email"], [type="text"], [type="password"]{
+    width: 94%;
+}
+
+button:hover {
+    background-color: #5a90ea;
+}
+
+button:active {
+    background-color: #2fccf8;
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <form method="POST" action="register.php">
+        <label for="role">Role:</label>
+        <select name="role" id="role" required>
+            <option value="admin">Admin</option>
+            <option value="student">Student</option>
+            <option value="teacher">Teacher</option>
+        </select>
+        <br>
+
+        <!-- Common fields -->
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <br>
+        
+        <label for="password" id="password-label">Password:</label>
+        <input type="password" name="password" id="password" required />
+        <br>
+
+        <!-- Student-specific fields -->
+        <div id="student-fields">
+            <label for="reg_no">Register Number:</label>
+            <input type="text" name="reg_no" id="reg_no" />
+        </div>
+        <br>
+
+        <!-- Teacher-specific fields -->
+        <div id="teacher-fields">
+            <label for="staff_id">Staff ID:</label>
+            <input type="text" name="staff_id" id="staff_id" required />
+            <label for="teacher_name">Staff Name:</label>
+            <input type="text" name="teacher_name" id="teacher_name" required />
+        </div>
+        <br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        // Role selection handling
+        const roleSelect = document.getElementById("role");
+        const studentFields = document.getElementById("student-fields");
+        const teacherFields = document.getElementById("teacher-fields");
+        const passwordLabel = document.getElementById("password-label");
+        const passwordField = document.getElementById("password");
+
+        roleSelect.addEventListener("change", () => {
+            if (roleSelect.value === "student") {
+                studentFields.style.display = "block";
+                teacherFields.style.display = "none";
+                passwordLabel.style.display = "block";
+                passwordField.required = true;
+            } else if (roleSelect.value === "teacher") {
+                studentFields.style.display = "none";
+                teacherFields.style.display = "block";
+                passwordLabel.style.display = "block";
+                passwordField.required = true;
+            } else {
+                studentFields.style.display = "none";
+                teacherFields.style.display = "none";
+                passwordLabel.style.display = "block";
+                passwordField.required = true;
+            }
+        });
+
+        // Initialize visibility
+        const initializeVisibility = () => {
+            if (roleSelect.value === "student") {
+                studentFields.style.display = "block";
+                teacherFields.style.display = "none";
+            } else if (roleSelect.value === "teacher") {
+                studentFields.style.display = "none";
+                teacherFields.style.display = "block";
+            } else {
+                studentFields.style.display = "none";
+                teacherFields.style.display = "none";
+            }
+        };
+
+        initializeVisibility();
+    </script>
+</body>
+</html>
