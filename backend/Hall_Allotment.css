@@ -1,0 +1,534 @@
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    margin-top: -2vh;
+    height: 90px;
+}
+
+.header_section{
+    background-color: #2A3D72;
+    display: flex;
+    width: 100%;
+}
+
+.header_section img{
+    margin-top: 1.5vh;
+    margin-left: 3vh;
+    height: 80px;
+}
+
+.LN{
+    font-family: "Habibi", serif;
+    margin-top: 2vh;
+    color: #ffffff;
+    font-style: normal;
+}
+
+.LN h3{
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 100;
+    margin-left: 5vh;
+}
+
+.LN p{
+    margin-top: -3vh;
+    font-size: 14px;
+}
+
+.collapse{
+    margin-left: 700px;
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Admin{
+    font-family: "Hammersmith One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #FA8D3D;
+    color: #ffffff;
+    font-size: 16px;
+    margin-left: 15px;
+    text-decoration: none;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 15px 32px;
+    margin: 22px;
+    transition: transform 0.3s;
+}
+
+.Admin:hover {
+    background-color: #ffffff; /* Highlight color */
+    border-radius: 50px;
+    color: #FA8D3D;
+    transform: scale(1.05);
+}
+
+.profile-icon{
+    font-family: "Halant", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    margin-top: 4vh;
+    margin-right: 4vh;
+    background-color: #2FCCF8; 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    text-align: center; 
+    line-height: 40px; 
+    color: #FFFFFF; 
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.profile-icon:hover{
+    background-color: #FA8D3D;
+    color: #FFFFFF;
+    border-radius: 50%;
+    transform: scale(1.05);
+}
+
+/* General navbar styling */
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.nav-item:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover {
+    border-radius: 50px;
+    color: #2FCCF8;
+    transform: scale(1.05);
+}
+
+                 /*-------------------------- Form_1 ------------------------------*/
+
+.Form_1{
+    height: 662px;
+    background-color: #FA8D3D;
+    color: #ffffff;
+}
+
+.Form_1 img{
+    margin-left: 950px;
+}
+
+.F1{
+    margin-left: 100px;
+    margin-top: -550px;
+}
+
+.F1 h1{
+    font-family: "Halant", serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    font-size: 5em;
+}
+
+.F1 p{
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 80%;
+    margin-top: -50px;
+}
+
+.Allocate-Exam-Hall{
+    font-family: "Hedvig Letters Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 15px;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 25px 42px;
+    margin: 22px;
+    transition: transform 0.3s;
+}
+
+.Allocate-Exam-Hall:hover{
+    background-color: #2FCCF8;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.View-Allotment{
+    font-family: "Hedvig Letters Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 5vh;
+    text-decoration: none;
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 15px;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 25px 42px;
+    margin: 22px;
+    transition: transform 0.3s;
+}
+
+.View-Allotment:hover{
+    background-color: #2FCCF8;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+                 /*-------------------------- Form_2 ------------------------------*/
+
+.admin-panel {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 25vh;
+}
+
+.F2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 25px;
+    width: 450px;
+    height: 180px;
+    border-radius: 50px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    display: flex;
+    height: 180px;
+    align-self: start;
+    margin-left: 3vh;
+    object-fit: cover;
+}
+
+.red img{
+    transform: scaleX(-1);
+}
+
+.orange {
+    background-color: #FA8D3D;
+}
+
+.blue-light {
+    background-color: #2FCCF8;
+}
+
+.blue-dark {
+    background-color: #5A90EA;
+}
+
+.red {
+    background-color: #F76E53;
+}
+
+.card p {
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0;
+    align-self: end;
+    font-size: 24px;
+    margin-right: 10vh;
+    margin: 0 -160px -40px 0;
+}
+
+.orange p{
+    margin: 0 -150px -40px 0;
+}
+
+.card .count {
+    display: flex;
+    font-size: 3.5rem;
+    font-weight: bold;
+    align-self: end;
+    margin: -125px -120px 10px -10px;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    flex-grow: 1;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+.F2_img{
+    margin-left: 160vh;
+    bottom: 10px;
+    height: 450px;
+    z-index: -1; /* Sends it behind other content if necessary */
+}
+
+                 /*-------------------------- Form_3 ------------------------------*/
+
+.Form_3{
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+    margin-left: 25vh;
+}
+
+.Form_3 h1{
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.description {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #B2B1B4;
+    opacity: 80%;
+    margin-bottom: 30px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 35px;
+    gap: 60px;
+}
+
+.testimonial {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+.icon {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student {
+    background-color: #5A90EA;
+    background-image: url('./img/stu_8.png'); /* Replace with actual image path */
+}
+
+.faculty {
+    background-color: #FA8D3D;
+    background-image: url('./img/stu_11.png'); /* Replace with actual image path */
+}
+
+.admin {
+    background-color: #2FCCF8;
+    background-image: url('./img/stu_13.png'); /* Replace with actual image path */
+}
+
+.title {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    color: #000;
+}
+
+                 /*-------------------------- Form_4 ------------------------------*/
+
+.Form_4{
+    display: flex;
+    align-items: center;
+    background-color: #B8F4F8;
+    padding: 0px 0px 25px 200px;
+}
+
+.contact-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-text h1 {
+    font-family: "Kadwa", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.feedback-link {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: inline-block;
+    font-size: 1.1em;
+    color: #76767D;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.F4_description {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: #191A29;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.submit-button {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight:400;
+    font-style: normal;
+    background-color: #FA8D3D;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #5A90EA;
+    color: #000;
+    transform: scale(1.05);
+}
+
+.contact-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-image img {
+    width: 499px;
+    margin-top: -18vh;
+    margin-bottom: -12.9vh;
+}
+
+.footer .F-img{
+    width: 1349px;
+    opacity: 50%;
+    margin-top: -130vh;
+    margin-bottom: -15px;
+}
+
+.FF p{
+    font-family: "Hanken Grotesk", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1em;
+    text-align: center;
+    color: #191A29;
+    margin-left: 15vh;
+    margin-right: 15vh;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    margin-top: 120vh;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #2FCCF8; /* Use your preferred color */
+    color: white;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+#scrollToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #5A90EA; /* Optional hover color */
+}
+
+
+/* ------------------------ Mobile Media Queries ------------------------ */
+
+@media screen and (max-width: 768px) {
+    
+}
